@@ -42,3 +42,9 @@ application {
     // Define the main class for the application.
     mainClass = "org.example.App"
 }
+
+// Custome task
+// https://docs.gradle.org/current/javadoc/org/gradle/api/tasks/Exec.html
+tasks.register<Exec>("execDate") {
+    commandLine("date")
+}
