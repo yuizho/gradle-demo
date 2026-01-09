@@ -48,3 +48,16 @@ application {
 tasks.register<Exec>("execDate") {
     commandLine("date")
 }
+
+tasks.register("hello") {
+    doLast {
+        println("Hello!")
+    }
+}
+
+tasks.register("greet") {
+    doLast {
+        println("How are you?")
+    }
+    dependsOn("hello")
+}
